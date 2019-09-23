@@ -81,7 +81,7 @@ public class LoteriaModel {
         return retorno;
     }
 
-    public int[] geraResultado(){
+    public void geraResultado(){
 
         int[] resultadoTemp = new int[6];
         Random random = new Random();
@@ -96,8 +96,9 @@ public class LoteriaModel {
             }
         } while (indexResultado < 6);
 
-        Arrays.sort(resultadoTemp);
-        return resultadoTemp;
+
+        setResultado(resultadoTemp);
+        Arrays.sort(resultado);
     }
 
     public boolean confereExisteDezenaResultrado(int dezena){
